@@ -1,30 +1,30 @@
-// counter program logic
-
+// Counter program logic
+// Initialization
 const increaseButton = document.getElementById("button-increase");
 const decreaseButton = document.getElementById("button-decrease");
 const resetButton = document.getElementById("button-reset");
 const countLabel = document.getElementById("counter-label");
 const inputIncrement = document.getElementById("input-increment");
-
 let count = 0;
 let increment = 1;
 
-inputIncrement.onchange = function(){
-    increment = parseInt(inputIncrement.value);
-};
 
-increaseButton.onclick = function(){
+// Event handling
+inputIncrement.onchange = ()=> {increment = parseInt(inputIncrement.value)};
+
+increaseButton.onclick = ()=>{
     updateCount(count+increment);
 };
 
-decreaseButton.onclick = function(){
+decreaseButton.onclick = ()=>{
     updateCount(count-increment);
 };
 
-resetButton.onclick = function(){
+resetButton.onclick = ()=>{
     updateCount(0);
-};
+}
 
+// Functions
 function updateCount(num){
     if(isNaN(num)){
         countLabel.textContent = 'ERROR';
