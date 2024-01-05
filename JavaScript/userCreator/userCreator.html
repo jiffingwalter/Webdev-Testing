@@ -8,7 +8,36 @@
     </head>
     <body>
         <div>
-            .
+            <section class="sec-heading">
+                <h1>User Creator</h1>
+                <p>Testing JavaScript with a mock user creator module for a website</p><br>
+            </section>
+            <section class="sec-input">
+                <form method="get" id="form-createUser">
+                    <p>New user info:</p><br>
+
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" required><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" required><br>
+
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" required><br>
+
+                    <label for="confirmPassword">Confirm Password:</label><br>
+                    <input type="password" id="confirmPassword"><br>
+
+                    <label for="dob">Date of birth:</label><br>
+                    <input type="date" id="dob" required><br><br><br>
+
+                    <button id="userInfo-submit" type="button" onclick="submitForm()">Create user</button>
+                </form>
+            </section>
+            <br><br><br>
+            <section class="sec-currUsers">
+                current users...
+            </section>
         </div>
         <script src="userCreator.js"></script>
     </body>
