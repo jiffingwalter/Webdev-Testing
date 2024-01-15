@@ -28,5 +28,3 @@ function isAdult(element){
 function isChild(element){
     return element < 18;
 }
-
-// get
