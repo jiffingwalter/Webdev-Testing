@@ -1,0 +1,255 @@
+body{
+    margin: 0px;
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    background-color: grey;
+}
+.stage{
+    background-color: whitesmoke;
+    border-radius: 25px;
+    width: 50%;
+    margin: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-self:center;
+    align-self: center;
+}
+.center{
+    justify-self:center;
+    align-self: center;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+input{
+    width:50px;
+}
+.output{
+    display: grid;
+}
+#diceResult,#diceRolls{
+    min-height: 40px;
+    max-width: 580px;
+    margin:25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.die{
+    width:90px;
+    height:90px;
+    margin:10px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: flex;
+    background-color: white;
+
+    div{
+        div{
+            width:30px;
+            height:30px;
+            display: grid;
+
+            .dot{
+                font-size: 1rem !important;
+                width:23px;
+                height:23px;
+                justify-self: center;
+                align-self: center;
+                display: block;
+            }
+        }
+    }
+}
+.die.six{
+    div{
+        .four{
+            .dot{
+                display: none;
+            }
+        }
+        .five{
+            .dot{
+                display: none;
+            }
+        }
+        .six{
+            .dot{
+                display: none;
+            }
+        }
+    }
+}
+.die.five{
+    div{
+        .two{
+            .dot{
+                display: none;
+            }
+        }
+        .four{
+            .dot{
+                display: none;
+            }
+        }
+        .six{
+            .dot{
+                display: none;
+            }
+        }
+        .eight{
+            .dot{
+                display: none;
+            }
+        }
+    }
+}
+.die.four{
+    div{
+        .two{
+            .dot{
+                display: none;
+            }
+        }
+        .four{
+            .dot{
+                display: none;
+            }
+        }
+        .five{
+            .dot{
+                display: none;
+            }
+        }
+        .six{
+            .dot{
+                display: none;
+            }
+        }
+        .eight{
+            .dot{
+                display: none;
+            }
+        }
+    }
+}
+.die.three{
+    div{
+        .two{
+            .dot{
+                display: none;
+            }
+        }
+        .three{
+            .dot{
+                display: none;
+            }
+        }
+        .four{
+            .dot{
+                display: none;
+            }
+        }
+        .six{
+            .dot{
+                display: none;
+            }
+        }
+        .seven{
+            .dot{
+                display: none;
+            }
+        }
+        .eight{
+            .dot{
+                display: none;
+            }
+        }
+    }
+}
+.die.two{
+    div{
+        .two{
+            .dot{
+                display: none;
+            }
+        }
+        .three{
+            .dot{
+                display: none;
+            }
+        }
+        .four{
+            .dot{
+                display: none;
+            }
+        }
+        .five{
+            .dot{
+                display: none;
+            }
+        }
+        .six{
+            .dot{
+                display: none;
+            }
+        }
+        .seven{
+            .dot{
+                display: none;
+            }
+        }
+        .eight{
+            .dot{
+                display: none;
+            }
+        }
+    }
+}
+.die.one{
+    div{
+        .one{
+            .dot{
+                display: none;
+            }
+        }
+        .two{
+            .dot{
+                display: none;
+            }
+        }
+        .three{
+            .dot{
+                display: none;
+            }
+        }
+        .four{
+            .dot{
+                display: none;
+            }
+        }
+        .six{
+            .dot{
+                display: none;
+            }
+        }
+        .seven{
+            .dot{
+                display: none;
+            }
+        }
+        .eight{
+            .dot{
+                display: none;
+            }
+        }
+        .nine{
+            .dot{
+                display: none;
+            }
+        }
+    }
+}

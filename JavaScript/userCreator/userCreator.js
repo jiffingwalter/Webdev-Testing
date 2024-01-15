@@ -8,6 +8,7 @@ const inputConfirmPassword=document.getElementById('confirmPassword');
 const inputDob=document.getElementById('dob');
 
 // root application ---------------------------------------------------------------------------------
+// create the example user and initialize list on page load
 createExampleUser();
 initUserList();
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dice Roller app</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="diceRoller.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="stage">
+            <h1 class="center">Dice roller app</h1>
+            <div class="center">
+                <label for="num"># of dice:</label>
+                <input id="inputNum" type="number" value="1" min="1">
+                <button id="buttRoll" onclick="rollDice()">Roll dice</button>
+            </div>
+            <div class="output center">
+                <div class="center" id="diceResult">
+                    
+                </div>
+                <div class="center" id="diceRolls">
+    
+                </div>
+            </div>
+        </div>
+        <script src="diceRoller.js"></script>
+    </body>
+</html>
