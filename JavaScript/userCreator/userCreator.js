@@ -67,7 +67,7 @@ function initUserList(){
         divUserList.innerHTML="No current users!";
     } else {
         let text = "";
-        users.forEach(function(currentValue,index,array){
+        users.forEach((currentValue,index,array)=>{
             text += "<b>User ID: </b>" + users[index]['id'] + "<br>" +
             "<b>Username: </b>" + users[index]['username'] + "<br>" +
             "<b>Email: </b>" + users[index]['email'] + "<br>" +

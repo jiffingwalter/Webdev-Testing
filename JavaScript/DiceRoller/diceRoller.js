@@ -19,8 +19,8 @@ function rollDice(){
 // get total value of dice
 function getTotal(values){
     let num = 0;
-    values.forEach((currentValue) => {
-        num += currentValue;
+    values.forEach((element) => {
+        num += element;
     });
     return num;
 }
