@@ -12,7 +12,7 @@ const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const numbers = "0123456789";
 const symbols = "!@#$%&*()";
 
-function generate(){
+function generatePassword(){
     console.log("DEBUG: generating password...")
     //setup
     const passwordLength = passwordLengthInput.value;
@@ -48,5 +48,5 @@ function generate(){
     return password;
 }
 function output(){
-    outputBox.value = generate();
+    outputBox.value = generatePassword();
 }
