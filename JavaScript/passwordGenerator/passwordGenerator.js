@@ -13,8 +13,8 @@ const numbers = "0123456789";
 const symbols = "!@#$%&*()";
 
 function generatePassword(){
-    console.log("DEBUG: generating password...")
-    //setup
+    //console.log("DEBUG: generating password...")
+    // setup
     const passwordLength = passwordLengthInput.value;
     const includesLowercase = includesLowercaseBox.checked;
     const includesUppercase = includesUppercaseBox.checked;
@@ -35,16 +35,17 @@ function generatePassword(){
         return `At least one set of characters need to be selected`;
     }
 
+    // generation and output
     for(let i = 0;i<passwordLength;i++){
         const randIndex = Math.floor(Math.random() * allowedChars.length);
         password += allowedChars[randIndex];
     }
-    console.log(`DEBUG: generated password: ${password} with inputs...`);
-    console.log(`    length: ${passwordLength}\n
-    including lowercase: ${includesLowercase}\n
-    including uppercase: ${includesUppercase}\n
-    including numbers: ${includesNumbers}\n
-    including symbols: ${includesSymbols}\n`);
+    // console.log(`DEBUG: generated password: ${password} with inputs...`);
+    // console.log(`    length: ${passwordLength}\n
+    // including lowercase: ${includesLowercase}\n
+    // including uppercase: ${includesUppercase}\n
+    // including numbers: ${includesNumbers}\n
+    // including symbols: ${includesSymbols}\n`);
     return password;
 }
 function output(){
