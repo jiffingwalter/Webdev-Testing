@@ -1,0 +1,20 @@
+body{
+    background-image: url(https://blz04pap002files.storage.live.com/y4mKUfq6i9duMW8Xf63MaylQ9t4w5HiF-n7TXLWX8zej_emvCKI4um9xOke2IZ9XMzZ3yMcQr2f3AoznkpuO-ucsqCji_2vFWJBX0p7UUIeF-1vnVA5uITArhKV9FLlxoSlNA-vTKkcNSprmjKqEY_lCJuwepxNbu0iy4NTp60MQHHnq-xGgS8G-kNhcjRr9Pfk_pZsjnh_aZtROUpLXusuvrlT4wtoLZzNT3sEJyU9oEU?encodeFailures=1&width=968&height=544);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+}
+#clockContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#clock{
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    padding: 50px 100px 50px 100px;
+    font-family: monospace;
+    font-size: 4em;
+}
