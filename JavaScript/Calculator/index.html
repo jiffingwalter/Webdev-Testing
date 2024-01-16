@@ -9,30 +9,30 @@
     <body>
         <div class="root">
             <div class="calc-body">
-                <p class="label">Just-Tech JW-95</p>
+                <p class="label">Jus-tech JW-95 Calculator</p>
                 <div class="calc-faceplate">
-                    <input type="longtext" disabled id="screen" value="test"></longtext>
+                    <input type="longtext" readonly id="screen" value=""></longtext>
                     <div class="buttons">
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
-                        <button>/</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button>*</button>
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>-</button>
-                        <button>C</button>
-                        <button>0</button>
-                        <button>.</button>
-                        <button>+</button>
+                        <button onclick="append('7')" class="butNum">7</button>
+                        <button onclick="append('8')" class="butNum">8</button>
+                        <button onclick="append('9')" class="butNum">9</button>
+                        <button onclick="append('/')">/</button>
+                        <button onclick="append('4')" class="butNum">4</button>
+                        <button onclick="append('5')" class="butNum">5</button>
+                        <button onclick="append('6')" class="butNum">6</button>
+                        <button onclick="append('*')">*</button>
+                        <button onclick="append('1')" class="butNum">1</button>
+                        <button onclick="append('2')" class="butNum">2</button>
+                        <button onclick="append('3')" class="butNum">3</button>
+                        <button onclick="append('-')">-</button>
+                        <button onclick="clearScreen()">C</button>
+                        <button onclick="append('0')" class="butNum">0</button>
+                        <button onclick="append('.')" >.</button>
+                        <button onclick="append('+')" >+</button>
                         <button class="empty"></button>
                         <button class="empty"></button>
                         <button class="empty"></button>
-                        <button>=</button>
+                        <button onclick="calculate()">=</button>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
     display: grid;
     height: 625px;
     width: 400px;
-    background-color: rgb(87, 46, 46);
+    background-color: rgb(112, 42, 42);
     border-radius: 15px;
 
     .calc-faceplate{
@@ -48,8 +48,22 @@ button{
     height: 65px;
     margin: 4px;
     font-size: 3em;
+    cursor: pointer;
+    background-color: salmon;
+    transition: 0.05s;
+}
+button.butNum{
+    background-color: rgb(196, 193, 193);
+}
+button:hover{
+    background-color: whitesmoke;
+}
+button:active{
+    background-color: white;
+    color: grey;
 }
 button.empty{
     background-color: rgba(0, 0, 0, 0);
+    cursor: auto;
     border: none;
 }
