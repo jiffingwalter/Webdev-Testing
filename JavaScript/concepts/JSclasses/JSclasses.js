@@ -226,7 +226,29 @@ class Person{
 const personBad = new Person(420,69,'get punked'); // should not work
 const personGood = new Person('Simon','Douglas',28);
 
-console.log(personGood.firstname); // properties are not viewable by default since they're private and there's no getter
+console.log(personGood.firstname); // note that properties are not viewable by default since they're private and there's no getter
 console.log(personGood.lastname);
 console.log(personGood.age);
 console.log(personGood.fullname);
+
+// testing a nested object inside a class
+class PersonNested{
+    constructor(name, age, ...address){
+        this.name = name,
+        this.age = age,
+        this.address = new Address(...address);
+    }
+}
+
+class Address{
+    constructor(street,city,country){
+        this.street = street;
+        this.city = city;
+        this.country = country;
+    }
+}
+
+const personNested1 =  new PersonNested("Justin",25,"123 Street","Cityplace","USA");
+const personNested2 =  new PersonNested("Justoni",52,"321 Road","PlaceCity","UK");
+console.log(personNested1);
+console.log(personNested2);

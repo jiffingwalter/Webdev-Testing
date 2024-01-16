@@ -33,3 +33,21 @@ function User(username,password,email,age){
 
 const newUser = new User('justoni','superSecretPassword','justin@walter.net',25);
 newUser.getInfo();
+
+// nested objects example
+const person = {
+    name: "Simon Douglas",
+    age: 28,
+    isStudent: false,
+    hobbies: ["Drawing", "Writing", "Video Games"],
+    address: {
+        street: "123 Street St.",
+        city: "London",
+        country: "United Kingdom"
+    }
+}
+
+console.log(`Nested object testing: Listing out ${person.name}'s file...`);
+for(const property in person){ // for loop to go through each property in an object
+    console.log(person[property]);
+}
