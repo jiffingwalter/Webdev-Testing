@@ -65,8 +65,15 @@ console.log(`User count reported from object created from User class: ${user1.us
 console.log(`User count reported directly from User class: ${User.userCount}`);
 
 console.log(`------------------------`)
-// inheritence testing -----
+// inheritence and super keyword testing --------------------
 class Animal{
+    name = '';
+    age = 0;
+    constructor(name, age){
+        this.name = name,
+        this.age = age
+    };
+
     alive=true;
     eat(){
         console.log(`This ${this.name} is eating`)
@@ -74,33 +81,51 @@ class Animal{
     sleep(){
         console.log(`This ${this.name} is sleeping`)
     }
+    move(speed){
+        console.log(`This ${this.name} is moving at a speed of ${speed}`)
+    }
 }
 
-class Rabbit extends Animal{
-    name = "Rabbit";
+class Rabbit extends Animal{ // creates rabbit class based on what is already set by animal superclass
+    runSpeed = 0;
+    constructor(name, age, runSpeed){
+        super(name, age); // passes these values back to parent object for it's constructor
+        this.runSpeed = runSpeed;
+    }
 
     run(){
-        console.log(`This ${this.name} is running`)
+        console.log(`This ${this.name} is running`);
+        super.move(this.runSpeed); // passes this subclasses value to the superclass's move method
     }    
 }
 class Fish extends Animal{
-    name = "Fish";
+    swimSpeed = 0;
+    constructor(name, age, swimSpeed){
+        super(name, age);
+        this.swimSpeed = swimSpeed;
+    }
 
     swim(){
-        console.log(`This ${this.name} is swimming`)
+        console.log(`This ${this.name} is swimming`);
+        super.move(this.swimSpeed);
     }
 }
 class Hawk extends Animal{
-    name = "Hawk";
+    flySpeed = 0;
+    constructor(name, age, flySpeed){
+        super(name, age);
+        this.flySpeed = flySpeed;
+    }
     
     fly(){
-        console.log(`This ${this.name} is flying`)
+        console.log(`This ${this.name} is flying`);
+        super.move(this.flySpeed);
     }
 }
 
-const rabbit = new Rabbit();
-const fish = new Fish();
-const hawk = new Hawk();
+const rabbit = new Rabbit('Rabbit',2,12);
+const fish = new Fish('Fish',1,7);
+const hawk = new Hawk('Hawk',3,10);
 
 console.log(`Is this ${rabbit.name} alive? ${rabbit.alive}`);
 rabbit.eat();
