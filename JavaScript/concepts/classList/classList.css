@@ -1,0 +1,16 @@
+button{
+    font-size: 4rem;
+    padding: 25px;
+}
+.enabled{
+    background-color: rgb(94, 143, 192);
+    color: white;
+}
+.disabled{
+    background-color: whitesmoke;
+    color: grey;
+    border: none;
+}
+.hover{
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.307);
+}
