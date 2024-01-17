@@ -1,4 +1,4 @@
-// document object model (DOM) - the object of the entire html page itself, containing all html elements and their metadata
+// DOCUMENT OBJECT MODEL (DOM) - the object of the entire html page itself, containing all html elements and their metadata
 
 const elementByID = document.getElementById("this selects any single element by its html ID");
 const elementsByClass = document.getElementsByClassName("this gets an html collection of all elements with a class name");
@@ -10,7 +10,7 @@ const elementsByQuery = document.querySelectorAll("this gets a nodelist of all h
 // note that nodelists are static and do not live update when selected and modified, but DO have forEach and other useful methods
 
 
-// DOM navigation - process of navigating through the structure of the HTML document with javascript
+// DOM NAVIGATION - process of navigating through the structure of the HTML document with javascript -------------------------------
 // first element child - gets first child of the selected element
 let element = document.getElementById("list-names");
 const firstChild = element.firstElementChild; // returns first name in the list (oneyplays)
@@ -49,7 +49,6 @@ document.body.append(newParagraph); // append or prepend to document...
 // ... or append and prepend to other html elements
 const boxes = document.querySelectorAll('[id*="box"]'); // gets nodelist of all elements with an id beginning with box
 document.body.insertBefore(newParagraph,boxes[1]);
-console.log(boxes);
 
 // now delete the element
 document.body.removeChild(newParagraph);
@@ -58,3 +57,20 @@ document.body.removeChild(newParagraph);
 const newListItem = document.createElement('li');
 newListItem.textContent = "BroCode";
 document.getElementById("list-names").append(newListItem);
+
+// NODELIST --------------------------------------------------------------------
+// static collection of html elements that is created with querySelectorAll()
+// similar to array but dont have utilitiy functions
+// does not automatically update to reflect changes made to the DOM
+console.log(boxes[0]);
+boxes.forEach(entry =>{
+    entry.addEventListener("click",event=>{
+        event.target.remove();
+    });
+    entry.addEventListener("mouseover",event=>{
+        event.target.style.backgroundColor = "tomato";
+    });
+    entry.addEventListener("mouseout",event=>{
+        event.target.style.backgroundColor = "white";
+    });
+});
