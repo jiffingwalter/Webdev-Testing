@@ -1,0 +1,28 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#dialog{
+    font-style: italic;
+}
+#box{
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    font-size: 3rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#floatingBox{
+    background-color: skyblue;
+    width: 200px;
+    height: 200px;
+    font-size: 8.5rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
