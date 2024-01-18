@@ -42,7 +42,6 @@ button[type="submit"]:active{
     height: auto;
 }
 .card-col-emoji{
-    background: linear-gradient(160deg, rgb(79, 224, 209), rgb(228, 189, 71));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,10 +49,16 @@ button[type="submit"]:active{
     width: 256px;
     height: 200px;
     border-radius: 20px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
     p{
         font-size: 8rem;
         margin: 0;
     }
+}
+@keyframes fade{
+    from {opacity: 0}
+    to {opacity: 1;}
 }
 .card-flex{
     display: flex;
@@ -85,4 +90,36 @@ button[type="submit"]:active{
             width: 95%;
         }
     }
+}
+.backgroundCloudy{
+    animation-name: fade-cloudy;
+}
+.backgroundSunny{
+    animation-name: fade-sunny;
+}
+.backgroundRainy{
+    animation-name: fade-rainy;
+}
+.backgroundThunder{
+    animation-name: fade-thunder;
+}
+@keyframes fade-cloudy {
+    0% {background-color: rgb(212, 212, 212);}
+    50% {background-color: white;}
+    100% {background-color: rgb(212, 212, 212);}
+}
+@keyframes fade-sunny {
+    0% {background-color: rgb(125, 248, 235);}
+    50% {background-color: rgb(255, 216, 99);}
+    100% {background-color: rgb(125, 248, 235);}
+}
+@keyframes fade-rainy {
+    0% {background-color: rgb(212, 212, 212);}
+    50% {background-color: rgb(119, 155, 193);}
+    100% {background-color: rgb(212, 212, 212);}
+}
+@keyframes fade-thunder {
+    0% {background-color: rgb(119, 155, 193);}
+    50% {background-color: rgb(223, 208, 121);}
+    100% {background-color: rgb(119, 155, 193);}
 }
