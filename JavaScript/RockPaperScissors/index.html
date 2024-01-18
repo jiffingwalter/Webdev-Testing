@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rock-Paper-Scissors in JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="RockPaperScissors.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="app-root">
+            <h1>Lets play Rock, Paper, Scissors!</h1>
+            <section id="sec-comp">
+                <div class="score-display">
+                    <p><b>Computer: </b></p>
+                    <p id="comp-score">0</p>
+                </div>
+                <div id="div-comp-hand" class="">
+                    <p>Waiting for player...</p>
+                </div>
+            </section>
+            <section id="sec-result">
+                <h3 id="result-text">VS</h3>
+            </section>
+            <section id="sec-player">
+                <div class="score-display">
+                    <p><b>Player: </b></p>
+                    <p id="player-score">0</p>
+                </div>
+                <div id="div-player-hand" class="">
+                    <p>Waiting for input...</p>
+                </div>
+            </section>
+            <section id="sec-buttons">
+                <button onclick="playGame('rock')" class="hand-select">👊</button>
+                <button onclick="playGame('paper')" class="hand-select">✋</button>
+                <button onclick="playGame('scissors')" class="hand-select">✌</button>
+            </section>
+            <button onclick="resetGame()">Reset</button>
+        </div>
+        <script src="RockPaperScissors.js"></script>
+    </body>
+</html>
