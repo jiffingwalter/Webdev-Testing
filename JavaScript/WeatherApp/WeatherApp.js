@@ -1,11 +1,17 @@
-import {apiKey} from './openweathermap_apikey.js';
-
 // weather app logic
 // initialization
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
 const errorDisplay = document.createElement("p");
+let apiKey = '';
+fetch('./openweathermap_apikey.json')
+    .then(response=> response.json())
+    .then(value => {apiKey = value.key})
+    .catch(()=>{
+        displayError("API Key not found.");
+        apiKey = window.prompt("Please enter a valid OpenWeatherMap API key: ");
+    });
 
 weatherForm.addEventListener("submit", async event =>{
     event.preventDefault();
